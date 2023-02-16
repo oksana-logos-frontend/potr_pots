@@ -1,0 +1,9 @@
+.top-block {
+  &__image {
+    height: 319px;
+    background-image: url('../images/pot-smal-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+}

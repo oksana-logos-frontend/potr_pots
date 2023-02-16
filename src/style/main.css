@@ -16,4 +16,45 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 68px;
+  padding: 0 30px;
+}
+
+.header__logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #333333;
+}
+
+.header__btn {
+  cursor: pointer;
+}
+
+.top-block__image {
+  height: 319px;
+  background-image: url("../images/pot-smal-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
 /*# sourceMappingURL=main.css.map */
