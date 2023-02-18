@@ -42,6 +42,97 @@ ul {
   cursor: pointer;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  padding-top: 130px;
+  background-color: #03839E;
+  z-index: 5;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.mobile-menu:target {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mobile-menu__list {
+  margin: 0 auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobile-menu__item {
+  cursor: pointer;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.mobile-menu__link {
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #F8F8F8;
+}
+
+.mobile-menu__close-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 150px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  right: 0px;
+  bottom: 150px;
+}
+
+.mobile-menu__close-block > span {
+  color: #F8F8F8;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+}
+
+.mobile-menu__close-btn {
+  cursor: pointer;
+}
+
+.mobile-menu__line {
+  border-top: 1px solid #F8F8F8;
+  width: 50px;
+}
+
 .top-block__image {
   height: 319px;
   background-image: url("../images/pot-smal-mobile.png");
@@ -102,7 +193,7 @@ ul {
 }
 
 .top-block__btn > div {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
