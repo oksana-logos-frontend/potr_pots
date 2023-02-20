@@ -1,4 +1,6 @@
 .top-block {
+  position: relative;
+
   &__image {
     height: 319px;
     background-image: url('../images/pot-smal-mobile.png');
@@ -7,12 +9,45 @@
     background-position: left;
     margin-bottom: 25px;
     position: relative;
+
+    @include onTablet {
+      position: absolute;
+      right: 34px;
+      top: 0;
+      width: 306px;
+      height: 306px;
+    }
+
+    @include onDesktopScreen {
+      width: 500px;
+      height: 500px;
+      right: 135px;
+    }
   }
 
   &__second-block {
     padding: 0 30px;
     margin-bottom: 110px;
     position: relative;
+
+    @include onTablet {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(6, minmax(100px , 1fr));
+      row-gap: 0;
+      padding: 0 34px;
+    }
+
+    @include onLittleDesktopScreen {
+      grid-template-columns: repeat(8, minmax(90px , 1fr));
+    }
+
+    @include onDesktopScreen {
+      padding: 0 135px;
+      grid-gap: 30px;
+      row-gap: 0;
+      grid-template-columns: repeat(12, minmax(70px , 1fr));
+    }
   }
 
   &__title {
@@ -20,7 +55,7 @@
     font-weight: 400;
     font-size: 29px;
     line-height: 43px;
-    width: 308px;
+    width: 233px;
     letter-spacing: 0.155em;
     text-transform: uppercase;
     color: transparent;
@@ -31,6 +66,24 @@
     & span {
       color:$mainSecondColor;
     }
+
+    @include onTablet {
+      font-size: 64px;
+      line-height: 64px;
+      grid-column: 1 / 5;
+      width: 100%;
+      margin-bottom: -20px;
+    }
+
+    @include onLittleDesktopScreen {
+      grid-column: 1 / 6;
+      width: 90%;
+    }
+
+    @include onDesktopScreen {
+      width: 100%;
+      grid-column: 2 / 7;
+    }
   }
 
   &__price {
@@ -39,13 +92,31 @@
     font-size: 26px;
     line-height: 36px;
     color: $mainGrayColor;
+
+    @include onTablet {
+      grid-column: 3 / 5;
+    }
+
+    @include onDesktopScreen {
+      grid-column: 5 / 7;
+    }
+  }
+
+  &__price-text {
+    font-family: $ManropeFontFamile;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #4F4F4F;
     margin-bottom: 20px;
 
-    & span {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 150%;
-      color: #4F4F4F;
+    @include onTablet {
+      grid-column: 3 / 5;
+      margin-bottom: 50px;
+    }
+
+    @include onDesktopScreen {
+      grid-column: 5 / 7;
     }
   }
 
@@ -56,6 +127,19 @@
     outline: none;
     cursor: pointer;
     background-color: $mainYellowColor;
+    transition: transform 0.5s ease, background-color 0.5s;
+
+    & img {
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: translate(+15px);
+    }
+
+    &:active {
+      background-color: #c9b42f;
+    }
 
     & > div {
       width: 50%;
@@ -69,6 +153,16 @@
       font-weight: 600;
       font-size: 14px;
       font-family: $ManropeFontFamile;
+    }
+
+    @include onTablet {
+      width: 251px;
+      grid-column: 2 / 5;
+    }
+
+    @include onDesktopScreen {
+      width: 100%;
+      grid-column: 4 / 7;
     }
   }
 
@@ -86,10 +180,16 @@
     position: absolute;
     right: -76px;
     transform: rotate(90deg);
-    top: 264px;
+    top: 235px;
 
     & > img {
       transform: rotate(-90deg);
+    }
+
+    @include onTablet {
+      position: absolute;
+      left: -46px;
+      top: 360px;
     }
   }
 

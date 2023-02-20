@@ -2,3 +2,33 @@
   max-width: 1440px;
   margin: 0 auto;
 }
+
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.additional {
+  display: none;
+
+  @include onTablet {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 466px;
+    width: 75%;
+    background-color:#FFEC7A;
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 0 70%);
+    z-index: -1;
+  }
+
+  @include onDesktopScreen {
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 0 92%);
+  }
+}
+
+.active {
+  border-bottom: 2px solid #4F4F4F;
+}

@@ -1,8 +1,10 @@
 @import './utils/normalize';
 @import './utils/vars';
+@import './utils/mixsins';
 
 @import './blocks/common/common.scss';
 @import './blocks/header/header.scss';
 @import './blocks/mobile-menu/mobile-menu.scss';
 @import './blocks/desktop-menu/desktop-menu.scss';
 @import './blocks/top-block/top-block.scss';
+
