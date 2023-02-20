@@ -1,0 +1,50 @@
+.desktop-menu {
+  display: none;
+
+
+  @include onLittleDesktopScreen {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  &__list {
+    width: 70%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: $ManropeFontFamile;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4F4F4F;;
+  }
+
+  &__img {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: rotate(10deg);
+    }
+  }
+}

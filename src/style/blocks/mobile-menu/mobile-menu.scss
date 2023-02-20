@@ -25,6 +25,13 @@
 
   &__item {
     cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+
+    &:hover {
+      border-color: #F8F8F8;
+      transform: scale(1.1);
+    }
 
     &:not(:last-child) {
       margin-bottom: 15px;
@@ -38,7 +45,13 @@
     font-size: 16px;
     line-height: 150%;
     color: #F8F8F8;
+    
+
+    @include onTablet {
+      font-size: 24px;
+    }
   }
+
 
   &__close-block {
     display: flex;
@@ -61,6 +74,15 @@
 
   &__close-btn {
     cursor: pointer;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+    }
   }
 
   &__line {

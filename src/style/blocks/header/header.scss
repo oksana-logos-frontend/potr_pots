@@ -6,7 +6,23 @@
   height: 68px;
   padding: 0 30px;
 
-  &__btn {
-    cursor: pointer;
+  @include onTablet {
+    padding: 0 34px;
+    margin-bottom: 50px;
   }
+
+  @include onDesktopScreen {
+    padding: 0 135px;
+  }
+
+  &__btn {
+    display: block;
+    cursor: pointer;
+
+    @include onLittleDesktopScreen {
+      display: none;
+    }
+  }
+
+  
 }
